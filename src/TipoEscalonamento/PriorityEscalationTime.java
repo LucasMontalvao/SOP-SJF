@@ -11,19 +11,6 @@ public class PriorityEscalationTime extends Escalation {
         this.quantum = quantum;
     }
 
-    @Override
-    public ArrayList<Process> createProcess(){
-        ArrayList<Process> processArray = new ArrayList<Process>();
-        Process p1 = new Process("p1", 2, createWorkCharge("C10","E5","C4","",""));
-        Process p2 = new Process("p2", 1, createWorkCharge("C2","E10","C1","",""));
-        Process p3 = new Process("p3", 2, createWorkCharge("C16","E1","C10","",""));
-        Process p4 = new Process("p4", 0, createWorkCharge("C4","E1","C1","E1","C1"));
-        processArray.add(p1);
-        processArray.add(p2);
-        processArray.add(p3);
-        processArray.add(p4);
-        return processArray;
-    }
     public void getAllProcessWorkCharge(){
 
         ArrayList<Process> process = new ArrayList<Process>(createProcess());
