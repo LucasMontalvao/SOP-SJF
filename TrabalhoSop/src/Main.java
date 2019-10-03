@@ -20,11 +20,28 @@ public class Main {
 		}
 		return result;
 	}
-	/*
-	public int fifo(int[][] dados){
-		return int;
+	
+	public static int fifo (int[][] dados) {
+		int pages[] = new int[dados.length];
+		for(int i=0;i<dados.length;i++) {
+			for(int j=0;j<dados.length;j++) {
+				if(j == 0) {
+					pages[i] = dados[i][j];
+				}
+				
+			}
+		}
+		
+		int result = pages[0];
+		
+		for(int i=0;i<casa0.length;i++) {
+			if(casa0[i] < algo) {
+				result = pages[i];
+			}
+		}
+		
+		return result;
 	}
-	*/
 	public static int nru(int[][] dados){
 		int result = 0;
 		boolean condition = false;
@@ -52,7 +69,7 @@ public class Main {
 		int[][]dados = {{1, 128, 279, 1, 1}, {0, 230, 260, 1, 1},
 								{3, 120, 272, 1, 1}, {2, 160, 280, 1, 1}};
 		
-		//System.out.println(ramdon(dados));
+		System.out.println(fifo(dados));
 		System.out.println(nru(dados));
 		System.out.println(dados.length);
 
