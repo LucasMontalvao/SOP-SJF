@@ -21,7 +21,7 @@ public class Main {
 		return result;
 	}
 	
-	public static int fifo (int[][] dados) {
+	public static int fifo(int[][] dados) {
 		int pages[] = new int[dados.length];
 		for(int i=0;i<dados.length;i++) {
 			for(int j=0;j<dados.length;j++) {
@@ -34,8 +34,8 @@ public class Main {
 		
 		int result = pages[0];
 		
-		for(int i=0;i<casa0.length;i++) {
-			if(casa0[i] < algo) {
+		for(int i=0;i<pages.length;i++) {
+			if(pages[i] < algo) {
 				result = pages[i];
 			}
 		}
@@ -71,7 +71,7 @@ public class Main {
 		
 		System.out.println(fifo(dados));
 		System.out.println(nru(dados));
-		System.out.println(dados.length);
+		System.out.println(ramdon(dados));
 
 	}
 
